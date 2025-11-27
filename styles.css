@@ -60,6 +60,7 @@ body{
     align-items: center;
     gap: 15px;
     margin-top: 10px;
+    position: relative;
 }
 .author-info img{
     width: 40px;
@@ -89,12 +90,48 @@ body{
     cursor: pointer;
     background-color: var(--light-grayish-blue);
 }
+#share{
+    margin-left: auto;
+    border: none;
+    background: none;
+}
+#share-icon:hover{
+    background-color: rgba(0, 0, 0, 0.194);
+    filter: brightness(0.9);
+}
 .attribution {
     font-size: 11px;
     text-align: center;
     color: var(--grayish-blue);
     margin-top: 20px;
 }
+/* Panneau de partage */
+.share-panel {
+    position: absolute;
+    right: 30px;
+    bottom: 80px;  /* Ajuste selon ton design */
+    background-color: var(--very-dark-grayish-blue);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+.share-panel[hidden] {
+  display: none;
+}
+
+/* Style des liens */
+.share-panel a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
 .attribution a {
     color: var(--grayish-blue);
 }
